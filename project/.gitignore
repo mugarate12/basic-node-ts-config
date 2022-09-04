@@ -1,0 +1,7 @@
+# directories
+node_modules
+build
+temporary
+
+# files
+.env

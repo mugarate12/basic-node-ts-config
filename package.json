@@ -1,0 +1,23 @@
+{
+  "name": "basic-node-ts-config",
+  "version": "1.0.0",
+  "description": "Configuração básica para um ambiente de desenvolvimento com NodeJs + TypeScript",
+  "main": "./lib/copyFile.js",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-node-basic": "./bin/index.js"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "config"
+  ],
+  "author": "Mateus Cardoso dos Santos",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

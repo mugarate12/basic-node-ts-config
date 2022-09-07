@@ -11,6 +11,3 @@ if (arguments.length === 0) {
 } else {
   copy.copy(arguments[0]);
 }
-
-// // copy the file
-// copy.copy();

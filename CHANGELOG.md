@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2022-09-09
+### Added
+- controllers directory
+- services directory
+
 ## [1.0.1] - 2022-09-07
 ### Added
 - CHANGELOG file

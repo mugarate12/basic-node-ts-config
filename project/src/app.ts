@@ -12,7 +12,6 @@ const applicationType = String(process.env.NODE_ENV);
 
 const app = express();
 const server = http.createServer(app);
-const PORT = !process.env.PORT ? 8000 :  process.env.PORT;
 const processName = process.env.name || 'primary';
 
 app.use(cors({
@@ -31,6 +30,4 @@ app.use(routes);
 // celebrate errors
 app.use(errors());
 
-server.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
-});
+export default server;

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2022-09-19
+### Added
+- added configuration and examples to tests with JEST
+
 ## [1.0.2] - 2022-09-09
 ### Added
 - controllers directory

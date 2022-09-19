@@ -1,4 +1,4 @@
-This is a [Nodejs](https://nodejs.org/en/) project bootstrapped with [Create Node Basic](https://github.com/mugarate12/basic-node-ts-config) to create a basic structure and configuration of nodejs API with express and typescript
+This is a [Nodejs](https://nodejs.org/en/) project bootstrapped with [Create Node Basic](https://github.com/mugarate12/basic-node-ts-config) to create a basic structure and configuration of [Nodejs](https://nodejs.org/en) API with [Express](https://expressjs.com) and [Typescript](https://www.typescriptlang.org)
 
 ## Usage
 

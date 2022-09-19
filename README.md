@@ -15,13 +15,27 @@ npx create-node-basic [YOUR_PROJECT_NAME]
 project
 │   .env.example
 │   .gitignore
+│   babel.config.js
+│   tsconfig.spec.json
 │   CHANGELOG.md
 │   package-lock.json
 │   package.json
 │   README.md
 │   tsconfig.json
+│   __tests__
+│   └───unit
+|   │   example.test.ts
+│   └───integration
+|   │   example.test.ts
 └───src
 |       app.ts
+|       server.ts
+│   └───controllers
+│   |   │   ExampleController.ts
+│   |   │   index.ts
+│   └───services
+│   |   │   Example.services.ts
+│   |   │   index.ts
 │   └───routes
 │   |   │   example.routes.ts
 │   |   │   index.ts

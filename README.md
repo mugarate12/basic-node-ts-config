@@ -1,6 +1,6 @@
 # Basic Configuration to Nodejs With Express and Typescript
 
-this module serving a basic structure and configuration of nodejs API with express and typescrit  
+this module serving a basic structure and configuration of nodejs API with express and typescript  
 
 ## Usage
 

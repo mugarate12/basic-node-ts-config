@@ -63,4 +63,17 @@ run project in development build:
 npm run dev
 ```
 
+run all of tests in project:
+```shell
+npm run test
+```
+
 - Test your application run correctlly to send HTTP GET to localhost:8000
+
+## Future Features
+
+- [ ] Explain how design patters used in your initial configuration of project
+- [ ] Explain how to use your initial configuration of project
+- [ ] Add option to use Redis as cache
+- [ ] Add options to get initial Dockerfile and docker-compose.yml to run your project in docker
+- [ ] Add options to get initial configuration to run your project in Kubernetes

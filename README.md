@@ -74,6 +74,6 @@ npm run test
 
 - [ ] Explain how design patters used in your initial configuration of project
 - [ ] Explain how to use your initial configuration of project
-- [ ] Add option to use Redis as cache
-- [ ] Add options to get initial Dockerfile and docker-compose.yml to run your project in docker
+- [x] Add option to use Redis as cache
+- [x] Add options to get initial Dockerfile and docker-compose.yml to run your project in docker
 - [ ] Add options to get initial configuration to run your project in Kubernetes

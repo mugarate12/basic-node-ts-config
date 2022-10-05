@@ -1,0 +1,24 @@
+version: "3.9" 
+
+services:
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
+
+  app:
+    build: ./
+    volumes:
+      - ./:/var/www/app
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://cache
+      - NODE_ENV=development
+      - PORT=8000
+    command: 
+      sh -c 'npm i && npm start'
+    

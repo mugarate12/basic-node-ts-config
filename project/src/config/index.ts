@@ -1,1 +1,3 @@
-export * as redis from './redisClient';
+import redisClient from "./redisClient";
+
+export const redis = redisClient;

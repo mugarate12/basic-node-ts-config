@@ -8,7 +8,7 @@ WORKDIR '/var/www/app'
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm ci 
+RUN npm i 
 
 # Copy all files from current directory to app directory
 COPY . .

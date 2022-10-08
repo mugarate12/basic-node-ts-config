@@ -20,5 +20,5 @@ services:
       - NODE_ENV=production
       - PORT=8000
     command: 
-      sh -c 'npm i && npm start'
+      sh -c 'npm start'
     

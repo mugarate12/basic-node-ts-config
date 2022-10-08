@@ -1,6 +1,23 @@
 # Basic Configuration to Nodejs With Express and Typescript
 
-this module serving a basic structure and configuration of nodejs API with express and typescript  
+> this module serving a basic structure and configuration of nodejs API with express and typescript  
+
+## Summary
+
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Scripts in project](#scripts-in-project)
+- [Future Features](#future-features)
+
+## Getting Started
+
+### Prerequisites
+
+- [Nodejs](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/get-npm)
+- [Redis](https://redis.io/)
+- [Docker](https://www.docker.com/get-started) (Optional)
 
 ## Usage
 
@@ -10,26 +27,34 @@ this module serving a basic structure and configuration of nodejs API with expre
 npx create-node-basic [YOUR_PROJECT_NAME]
 ```
 
+## Folder Structure
 - Your project get this structure
 ```
 project
 │   .env.example
 │   .gitignore
-│   babel.config.js
-│   tsconfig.spec.json
+│   .dockerignore
 │   CHANGELOG.md
+│   README.md
+│   docker-compose.yml
+│   Dockerfile
+│   babel.config.js
 │   package-lock.json
 │   package.json
-│   README.md
 │   tsconfig.json
+│   tsconfig.spec.json
 │   __tests__
 │   └───unit
-|   │   example.test.ts
+|   │   |  example.test.ts
+|   │   |  redis.test.ts
 │   └───integration
-|   │   example.test.ts
+|   │   |  example.test.ts
 └───src
-|       app.ts
-|       server.ts
+|   |   app.ts
+|   |   server.ts
+│   └───config
+│   |   │   redisClient.ts
+│   |   │   index.ts
 │   └───controllers
 │   |   │   ExampleController.ts
 │   |   │   index.ts
@@ -39,13 +64,13 @@ project
 │   └───routes
 │   |   │   example.routes.ts
 │   |   │   index.ts
-│   |   
 |   └───utils
 │       │   createToken.ts
 │       │   handleError.ts
 │       │   index.ts
 ```
 
+## Scripts in project
 - Your package.json have initial commands to build, run and create server to development
 
 build your project:

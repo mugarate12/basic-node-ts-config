@@ -17,7 +17,7 @@ services:
       - "8000:8000"
     environment:
       - REDIS_URL=redis://cache
-      - NODE_ENV=development
+      - NODE_ENV=production
       - PORT=8000
     command: 
       sh -c 'npm i && npm start'

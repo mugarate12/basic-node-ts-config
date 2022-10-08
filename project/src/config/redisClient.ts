@@ -32,9 +32,13 @@ async function set(key: string, payload: string) {
     try {
       redisClient?.set(key, payload)
         .then((data: any) => resolve(true))
-        .catch((error: any) => reject(false));
+        .catch((error: any) => {
+          console.log('Redis set error: ', error);
+          return reject(false)
+        });
     } catch (error) {
-      reject(false);
+      console.log('Redis set error: ', error);
+      return reject(false);
     }
   });
 }

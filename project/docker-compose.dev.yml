@@ -1,0 +1,25 @@
+version: "3.9" 
+
+services:
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
+
+  app:
+    build: ./Dockerfile.dev
+    volumes:
+      - .:/src
+      - ./:/var/www/app # docker workdir
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://cache
+      - NODE_ENV=development
+      - PORT=8000
+    command: 
+      sh -c 'npm run dev'
+    

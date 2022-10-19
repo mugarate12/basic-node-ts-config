@@ -8,7 +8,9 @@ services:
       - 6379
 
   app:
-    build: ./Dockerfile.dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     volumes:
       - .:/src
       - ./:/var/www/app # docker workdir

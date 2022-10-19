@@ -8,7 +8,9 @@ services:
       - 6379
 
   app:
-    build: ./Dockerfile.test
+    build: 
+      context: .
+      dockerfile: Dockerfile.test
     volumes:
       - ./:/var/www/app # docker workdir
     depends_on:

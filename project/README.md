@@ -6,7 +6,8 @@
 
 - [Getting Started](#getting-started)
 - [Configuration](#configuration)
-- [Scripts](#scripts)
+- [Basic Scripts](#basic-scripts)
+- [Docker Scripts](#docker-scripts)
 - [Folder Structure](#folder-structure)
 - [Docker](#docker)
 
@@ -29,7 +30,7 @@ Set the environment variables in the `.env` file like the `.env.example` file.
 -  `NODE_ENV`: Set type of environment to run the server mode (development, production, test).
 -  `REDIS_URL`: URI of the Redis server. By default is `redis://localhost:6379`.
 
-## Scripts
+## Basic scripts
 
 - Your package.json have initial commands to build, run, test and create server to development
 
@@ -52,8 +53,39 @@ run all of tests in project:
 ```shell
 npm run test
 ```
+> Test your application run correctlly to send HTTP GET to localhost:8000
 
-- Test your application run correctlly to send HTTP GET to localhost:8000
+## Docker scripts
+
+run your project in docker to production (docker-compose -f ./docker-compose.yml up):
+```shell
+npm run docker:prod
+```
+
+run your project in docker to development (docker-compose -f ./docker-compose.dev.yml up):
+```shell
+npm run docker:dev
+```
+
+run your project in docker to test (docker-compose -f ./docker-compose.test.yml up):
+```shell
+npm run docker:test
+```
+
+run your project in docker to production (docker-compose -f ./docker-compose.yml up --build):
+```shell
+npm run docker:prod:build
+```
+
+run your project in docker to development (docker-compose -f ./docker-compose.dev.yml up --build):
+```shell
+npm run docker:dev:build
+```
+
+run your project in docker to test (docker-compose -f ./docker-compose.test.yml up --build):
+```shell
+npm run docker:test:build
+```
 
 ## Folder Structure
 
@@ -66,7 +98,11 @@ project
 │   CHANGELOG.md
 │   README.md
 │   docker-compose.yml
+│   docker-compose.test.yml
+│   docker-compose.dev.yml
 │   Dockerfile
+│   Dockerfile.dev
+│   Dockerfile.test
 │   babel.config.js
 │   package-lock.json
 │   package.json

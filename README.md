@@ -7,7 +7,8 @@
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
-- [Scripts in project](#scripts-in-project)
+- [Basic Scripts In Project](#basic-scripts-in-project)
+- [Docker Scripts In Project](#docker-scripts-in-project)
 - [Future Features](#future-features)
 
 ## Getting Started
@@ -37,7 +38,11 @@ project
 │   CHANGELOG.md
 │   README.md
 │   docker-compose.yml
+│   docker-compose.test.yml
+│   docker-compose.dev.yml
 │   Dockerfile
+│   Dockerfile.test
+│   Dockerfile.dev
 │   babel.config.js
 │   package-lock.json
 │   package.json
@@ -70,8 +75,9 @@ project
 │       │   index.ts
 ```
 
-## Scripts in project
-- Your package.json have initial commands to build, run and create server to development
+## Basic Scripts In Project
+
+- Your package.json have initial commands to build, run, test and create server to development
 
 build your project:
 ```shell
@@ -92,8 +98,39 @@ run all of tests in project:
 ```shell
 npm run test
 ```
+> Test your application run correctlly to send HTTP GET to localhost:8000
 
-- Test your application run correctlly to send HTTP GET to localhost:8000
+## Docker Scripts In Project
+
+run your project in docker to production (docker-compose -f ./docker-compose.yml up):
+```shell
+npm run docker:prod
+```
+
+run your project in docker to development (docker-compose -f ./docker-compose.dev.yml up):
+```shell
+npm run docker:dev
+```
+
+run your project in docker to test (docker-compose -f ./docker-compose.test.yml up):
+```shell
+npm run docker:test
+```
+
+run your project in docker to production (docker-compose -f ./docker-compose.yml up --build):
+```shell
+npm run docker:prod:build
+```
+
+run your project in docker to development (docker-compose -f ./docker-compose.dev.yml up --build):
+```shell
+npm run docker:dev:build
+```
+
+run your project in docker to test (docker-compose -f ./docker-compose.test.yml up --build):
+```shell
+npm run docker:test:build
+```
 
 ## Future Features
 

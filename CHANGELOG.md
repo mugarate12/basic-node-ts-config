@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.0] - 2022-09-19
+## [1.1.5] - 2022-10-18
+### Added
+- Create Docker files to development, test and production builds
+
+## [1.1.0] - 2022-10-01
 ### Added
 - Docker configuration for production
 - Redis configuration and tests to use this for cache

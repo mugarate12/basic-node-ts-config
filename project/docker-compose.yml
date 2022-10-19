@@ -1,15 +1,16 @@
 version: "3.9" 
-restart: always
 
 services:
   redis:
     image: redis
+    restart: always
     container_name: cache
     expose:
       - 6379
 
   app:
     build: ./
+    restart: always
     volumes:
       - ./:/var/www/app
     depends_on:

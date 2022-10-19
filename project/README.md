@@ -57,19 +57,34 @@ npm run test
 
 ## Docker scripts
 
-run your project in docker to production:
+run your project in docker to production (docker-compose -f ./docker-compose.yml up):
 ```shell
 npm run docker:prod
 ```
 
-run your project in docker to development:
+run your project in docker to development (docker-compose -f ./docker-compose.dev.yml up):
 ```shell
 npm run docker:dev
 ```
 
-run your project in docker to test:
+run your project in docker to test (docker-compose -f ./docker-compose.test.yml up):
 ```shell
 npm run docker:test
+```
+
+run your project in docker to production (docker-compose -f ./docker-compose.yml up --build):
+```shell
+npm run docker:prod:build
+```
+
+run your project in docker to development (docker-compose -f ./docker-compose.dev.yml up --build):
+```shell
+npm run docker:dev:build
+```
+
+run your project in docker to test (docker-compose -f ./docker-compose.test.yml up --build):
+```shell
+npm run docker:test:build
 ```
 
 ## Folder Structure

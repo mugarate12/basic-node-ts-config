@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Install app dependencies
 RUN npm i 
+RUN npm install pm2 -g
 
 # Copy all files from current directory to app directory
 COPY . .
@@ -17,4 +18,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the app
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start:pm2-runtime" ]

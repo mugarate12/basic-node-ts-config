@@ -1,18 +1,26 @@
 version: "3.9" 
-restart: always
 
 services:
+  nginx:
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+
   redis:
+    restart: always
     image: redis
     container_name: cache
     expose:
       - 6379
 
   app:
+    restart: always
     build: ./
     volumes:
       - ./:/var/www/app
     depends_on:
+      - nginx
       - redis
     ports:
       - "8000:8000"
@@ -21,5 +29,5 @@ services:
       - NODE_ENV=production
       - PORT=8000
     command: 
-      sh -c 'npm start'
+      sh -c 'npm run start:pm2-runtime'
     

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.5] - 2022-10-25
+### Added
+- Add Nginx and PM2 to production build of docker
+
 ## [1.1.5] - 2022-10-18
 ### Added
 - Create Docker files to development, test and production builds

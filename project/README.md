@@ -44,6 +44,11 @@ build your project and immediately run your app builded:
 npm start
 ```
 
+run project in production mode with pm2:
+```shell
+npm run start:pm2
+```
+
 run project in development build:
 ```shell
 npm run dev
@@ -108,12 +113,16 @@ project
 │   package.json
 │   tsconfig.json
 │   tsconfig.spec.json
+│   pm2.json
 │   __tests__
 │   └───unit
 |   │   |  example.test.ts
 |   │   |  redis.test.ts
 │   └───integration
 |   │   |  example.test.ts
+│   nginx
+|   │   default.conf
+|   │   Dockerfile
 └───src
 |   |   app.ts
 |   |   server.ts

@@ -48,6 +48,10 @@ project
 │   package.json
 │   tsconfig.json
 │   tsconfig.spec.json
+│   pm2.json
+│   nginx
+|   │   default.conf
+|   │   Dockerfile
 │   __tests__
 │   └───unit
 |   │   |  example.test.ts
@@ -87,6 +91,11 @@ npm run build
 build your project and immediately run your app builded:
 ```shell
 npm start
+```
+
+run project in production mode with pm2:
+```shell
+npm run start:pm2
 ```
 
 run project in development build:

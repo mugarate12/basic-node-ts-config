@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "primary",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "script": "./build/src/server.js",
+      "instance_var": "INSTANCE_ID"
+    },
+    {
+      "name": "replica",
+      "instances": -1,
+      "exec_mode": "cluster",
+      "script": "./build/src/server.js",
+      "instance_var": "INSTANCE_ID"
+    }
+  ]
+}

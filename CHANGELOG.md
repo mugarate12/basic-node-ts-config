@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.6] - 2022-10-26
+### Added
+- Add pino and pino-pretty to log to console
+
 ## [1.2.5] - 2022-10-25
 ### Added
 - Add Nginx and PM2 to production build of docker

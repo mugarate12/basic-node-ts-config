@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  description: "This is a example of documentation to your API"
+  version: 1.2.7
+  title: Basic Code Ts Config
+  termsOfService: http://swagger.io/terms/
+  contact:
+    name: "Mateus Cardoso dos Santos"
+    email: serjumano17@gmail.com
+tags:
+  - name: example
+    description: Something
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+      
+paths:
+  /:
+    get:
+      tags:
+        - example
+      summary: "Example to route docs"
+      description: "name value can be use your name to return message"
+      operationId: baseRoute
+      parameters:
+        - name: name
+          in: query
+          required: false
+          schema:
+            type: string
+            example: "Mateus"
+      responses:
+         "200":
+           description: "Successful request"
+           content:
+             application/json:
+               schema:
+                 type: object
+                 properties:
+                   message:
+                     type: string
+                     example: "API está funcionando!"
+           
+
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+  

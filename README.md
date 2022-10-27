@@ -1,6 +1,6 @@
 # Basic Configuration to Nodejs With Express and Typescript
 
-> this module serving a basic structure and configuration of nodejs API with express and typescript  
+> This module serving a basic structure and configuration of nodejs API with express and typescript  
 
 ## Summary
 
@@ -52,6 +52,8 @@ project
 │   nginx
 |   │   default.conf
 |   │   Dockerfile
+│   docs
+|   │   docs.yaml
 │   __tests__
 │   └───unit
 |   │   |  example.test.ts
@@ -145,6 +147,10 @@ npm run docker:test:build
 
 - [ ] Explain how design patters used in your initial configuration of project
 - [ ] Explain how to use your initial configuration of project
-- [x] Add option to use Redis as cache
 - [x] Add options to get initial Dockerfile and docker-compose.yml to run your project in docker
-- [ ] Add options to get initial configuration to run your project in Kubernetes
+- [x] Use Redis as cache
+- [x] Use pm2 to run your project in production mode
+- [x] Use Nginx as reverse proxy
+- [x] Use Swagger to document your API
+
+👔 [Linkedin](https://www.linkedin.com/in/mateus-cardoso-dos-santos-19a68a181/)

@@ -123,6 +123,8 @@ project
 │   nginx
 |   │   default.conf
 |   │   Dockerfile
+│   docs
+|   │   docs.yaml
 └───src
 |   |   app.ts
 |   |   server.ts

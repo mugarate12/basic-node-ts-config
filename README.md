@@ -52,6 +52,8 @@ project
 │   nginx
 |   │   default.conf
 |   │   Dockerfile
+│   docs
+|   │   docs.yaml
 │   __tests__
 │   └───unit
 |   │   |  example.test.ts

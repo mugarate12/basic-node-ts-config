@@ -30,6 +30,14 @@ Set the environment variables in the `.env` file like the `.env.example` file.
 -  `NODE_ENV`: Set type of environment to run the server mode (development, production, test).
 -  `REDIS_URL`: URI of the Redis server. By default is `redis://localhost:6379`.
 
+### NGINX
+
+The NGINX configuration is in the `nginx` folder. The `default.conf` file is the configuration file for the server.
+
+### Pm2
+
+The `pm2.json` file is the configuration file for the [PM2](https://pm2.keymetrics.io/) process manager.
+
 ## Basic scripts
 
 - Your package.json have initial commands to build, run, test and create server to development

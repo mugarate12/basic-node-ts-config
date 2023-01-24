@@ -1,6 +1,6 @@
 {
   "name": "basic-node-ts-config",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Configuração básica para um ambiente de desenvolvimento com NodeJs + TypeScript",
   "main": "./lib/copyFile.js",
   "preferGlobal": true,

@@ -1,6 +1,6 @@
-import createToken from './createToken';
-import * as handleError from './handleError';
-import logger from './logger';
+import createToken from './createToken.utils';
+import * as handleError from './handleError.utils';
+import logger from './logger.utils';
 
 export {
   createToken,

@@ -7,17 +7,16 @@ import swaggerUi from 'swagger-ui-express';
 import Yaml from 'yamljs';
 import path from 'path';
 
+import { constants } from './config';
 import routes from './routes';
 
 dotenv.config();
-const applicationType = String(process.env.NODE_ENV);
-const swaggerDocument = applicationType === 'development' || applicationType === 'test' || applicationType === 'undefined' ?
+const swaggerDocument = constants.applicationType === 'development' || constants.applicationType === 'test' || constants.applicationType === 'undefined' ?
   Yaml.load(path.resolve(__dirname, '..', 'docs', 'docs.yaml')) :
   Yaml.load(path.resolve(__dirname, '..', '..', 'docs', 'docs.yaml'));
 
 const app = express();
 const server = http.createServer(app);
-const processName = process.env.name || 'primary';
 
 app.use(cors({
   origin: true,

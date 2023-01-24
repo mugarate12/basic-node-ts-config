@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev --poll --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "dev": "SET NODE_ENV=development&&ts-node-dev --poll --respawn --transpile-only --ignore-watch node_modules src/server.ts",
     "start": "npm run build&&node build/src/server.js",
     "start:pm2": "npm run build&&pm2 start pm2.json",
     "start:pm2-runtime": "npm run build&&pm2-runtime start pm2.json",
@@ -58,6 +58,7 @@
     "supertest": "^6.2.4",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.2",
     "typescript": "^4.8.2"
   }
 }

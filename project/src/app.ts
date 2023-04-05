@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import http from 'http';
 import { errors } from 'celebrate';
 import swaggerUi from 'swagger-ui-express';
@@ -10,7 +9,6 @@ import path from 'path';
 import { constants } from './config';
 import routes from './routes';
 
-dotenv.config();
 const swaggerDocument = constants.applicationType === 'development' || constants.applicationType === 'test' || constants.applicationType === 'undefined' ?
   Yaml.load(path.resolve(__dirname, '..', 'docs', 'docs.yaml')) :
   Yaml.load(path.resolve(__dirname, '..', '..', 'docs', 'docs.yaml'));

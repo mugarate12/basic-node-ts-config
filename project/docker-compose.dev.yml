@@ -1,9 +1,21 @@
 version: "3.9" 
 
 services:
+  # db:
+  #   image: sqlite
+  #   container_name: db_DEV
+  #   volumes:
+  #     - ./sqlite_data:/data/db
+  #   environment:
+  #     - SQLITE_DATABASE=$DEV_DB_NAME
+  #     - SQLITE_USER=$DEV_AND_TEST_USERNAME
+  #     - SQLITE_PASSWORD=$DEV_AND_TEST_PASSWORD
+  #   ports:
+  #     - $DEV_AND_TEST_DB_PORT:$DEV_AND_TEST_DB_PORT
+
   redis:
     image: redis
-    container_name: cache
+    container_name: cache_DEV
     expose:
       - 6379
 
@@ -14,14 +26,23 @@ services:
     volumes:
       - .:/src
       - ./:/var/www/app # docker workdir
+      - ./sqlite_data:/var/www/app/data/db
     depends_on:
       - redis
     ports:
-      - "8000:8000"
+      - $PORT:$PORT
     environment:
-      - REDIS_URL=redis://cache
       - NODE_ENV=development
-      - PORT=8000
+      - PORT=$PORT
+
+      - REDIS_URL=redis://cache_DEV
+
+      - DEV_AND_TEST_DB_HOSTNAME=localhost
+      - DEV_AND_TEST_DB_DIALECT=$DEV_AND_TEST_DB_DIALECT
+      - DEV_AND_TEST_DB_PORT=$DEV_AND_TEST_DB_PORT
+      - DEV_AND_TEST_USERNAME=$DEV_AND_TEST_USERNAME
+      - DEV_AND_TEST_PASSWORD=$DEV_AND_TEST_PASSWORD
+
     command: 
-      sh -c 'npm run dev'
+      sh -c 'npm install -g sequelize-cli&&npm run dev'
     

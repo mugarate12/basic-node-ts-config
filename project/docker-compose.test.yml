@@ -3,7 +3,7 @@ version: "3.9"
 services:
   redis:
     image: redis
-    container_name: cache
+    container_name: cache_TEST
     expose:
       - 6379
 
@@ -18,7 +18,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - REDIS_URL=redis://cache
+      - REDIS_URL=redis://cache_TEST
       - NODE_ENV=test
       - PORT=8000
     command: 

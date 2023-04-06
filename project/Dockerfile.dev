@@ -8,7 +8,11 @@ WORKDIR '/var/www/app'
 COPY package*.json ./
 
 # Install app dependencies
+RUN apt update && apt install -y apt-transport-https ca-certificates sqlite3 libsqlite3-dev
 RUN npm i 
+RUN npm install -g sqlite3
+RUN npm install -g sequelize-cli
+RUN npm rebuild
 
 # Copy all files from current directory to app directory
 COPY . .
